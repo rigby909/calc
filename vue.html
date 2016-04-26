@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">	
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"> </script>
+		<link rel=stylesheet type="text/css" href="vue.css">
+		<script type="text/javascript" src="vue.js"></script>
+		<script type="text/javascript" src="vue1.js"></script>
+	</head>
+	<body>
+		<div id ="calc">
+			<div :title="firstNumberText">
+				<input type='number' v-model = 'firstNumber'> 
+			</div></br>
+			<div :title="secondNumberText">
+				<input type='number' v-model = 'secondNumber'> 
+			</div></br>
+			<button v-on:click = "sum"> + </button>
+			<button v-on:click = "subtr"> - </button>
+			<button v-on:click = "multipl"> * </button>
+			<button v-on:click = "degree"> / </button>
+			<div :title="resultText" v-for = "result in results">
+				<input type='number' v-model = 'result.value'>
+			</div>
+		</div>
+	</body>
+</html>
